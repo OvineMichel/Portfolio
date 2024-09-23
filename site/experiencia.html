@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja bem vindo</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../img/titulo.png">
+        </div>
+        <div id="div-botoes">
+            <a href="sobre-mim.html" class="jersey-10-regular">Sobre Mim</a>
+            <a href="projetos.html" class="jersey-10-regular">Meus Projetos</a>
+            <a href="experiencia.html" class="jersey-10-regular">Experiência</a>
+            <a href="fale-comigo.php" class="jersey-10-regular">Fale Comigo</a>
+        </div>
+        <div id="div-links">
+            <a href="https://www.instagram.com/vine.michel/"><img src="../img/instagram.png" width="25" height="25"></a>
+            <a href="https://br.linkedin.com/in/vinicius-michel-rosa-a175b2287"><img src="../img/logotipo-do-linkedin.png" width="25" height="25"></a>
+            <a href="https://github.com/OvineMichel"><img src="../img/github.png" width="25" height="25"></a>
+            <a href="https://www.facebook.com/profile.php?id=100058163606691"><img src="../img/facebook.png"  width="25" height="25"></a>
+            <a href="http://lattes.cnpq.br/1526705346300998"><img src="../img/lattes.png"  width="25" height="25"></a>
+        </div>
+    </header>
+    
+    <div id="sub-body" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <div id="escolhas-div">
+            <button id="code">Codeday</button>
+            <button id="mon">Monitoria</button>
+            <button id="har">Harvard</button>
+            <button id="mit">MIT</button>
+            <button id="neu">Colaboração Neuralink</button>
+        </div>
+        <div id="expe-div" style="position: relative;">
+            <h2 id="titulo-expe" class="jersey-10-regular" style="z-index: 3;">Selecione à esquerda</h2>
+            <canvas id="canvas-expe" width="1520" height="956"></canvas>
+            <div style="z-index: 3;">
+                <p id="sobre-expe" class="jersey-10-regular"></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <h4 class="jersey-10-regular">Vinicius Michel Rosa - Todos os direitos reservados @</h4>  
+        <img src="../img/titulo.png" width="60" height="41">
+    </footer>
+    
+    <script src="../scripts/bolinhas.js"></script>
+    <script src="../scripts/trocaexp.js"></script>
+</body>
+</html>

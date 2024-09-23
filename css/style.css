@@ -1,0 +1,380 @@
+body{
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(49, 26, 179);
+}
+
+#sub-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 0;
+}
+
+#background-canva {
+    position: absolute;
+    top: 20;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1; /* Fica atrás do conteúdo */
+    background-color: rgb(49, 26, 179);
+  }
+#div-sobre {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgb(83, 26, 190);
+    animation-name: mudaBox;
+    animation-duration: 10s; /* Defina a duração da animação */
+    animation-timing-function: ease-in-out; /* Opcional, define o estilo da transição */
+    animation-iteration-count: infinite;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 13px;
+    padding: 10px;
+    background-color: rgb(252, 252, 252);
+    border-radius: 4px;
+}
+
+.inputs{
+    height: 30px;
+    border: none;
+    border-left: 5px solid rgb(132, 6, 216);
+    background-color: rgb(202, 202, 202);
+    transition: background-color 1500ms, padding 1500ms, color 1500ms ease-in-out;
+}
+
+.inputs:focus{
+    background-color: rgb(49, 26, 179);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    outline: none;
+}
+
+textarea{
+    height: 80px;
+    width: 300px;
+    background-color: rgb(202, 202, 202);
+    transition: background-color 1500ms, color 1500ms ease-in-out;
+    text-align: center;
+}
+
+textarea:focus{
+    background-color: rgb(27, 6, 141);
+    color: rgb(255, 255, 255);
+    outline: none;
+}
+
+form > button{
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(49, 26, 185);
+    color: white;
+    cursor: pointer;
+    width: 120px;
+    padding: 10px;
+    box-shadow:  0 7px black;
+    transition: box-shadow 200ms, transform 200ms;
+}
+
+form > button:active{
+    transform: translateY(7px);
+    box-shadow:  0 0 black;
+}
+
+#mensagem{
+    color: rgb(54, 30, 187);
+    background-color: rgb(247, 247, 247);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#div-sobre > div{
+    width: 600px;
+}
+
+
+#sub-body > div{
+    display: flex;
+}
+
+.white-text{
+    color: white;
+}
+
+.new-amsterdam-regular {    /* Fonte importada da API da google (não, não foi o chatGPT que fez esse comentário.) */
+    font-family: "New Amsterdam", sans-serif; 
+    font-weight: 400;
+    font-style: normal;
+}
+
+.jersey-10-regular { /* Outra fonte */
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  
+header{
+    display: flex;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+header > div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#div-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
+
+#div-botoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#div-botoes > a {
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    transition: font-size 1200ms;
+    color: rgb(76, 20, 180);
+}
+
+#div-botoes > a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px; /* Altura da underline */
+    background-color: rgb(116, 0, 145);
+    bottom: 0;
+    left: 50%;
+    transition: width 1200ms, left 1200ms;
+}
+
+#div-botoes > a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+#div-botoes > a:hover {
+    font-size: 40px;
+}
+
+#container{
+    width: 850px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#semi-container-foto{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#titulo-sobre{
+    font-size: 140px;
+    color: white;
+    transition: font-size 1300ms;
+}
+
+#titulo-sobre:hover{
+    font-size: 180px;
+}
+
+
+
+#div-projetos{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+#titulo-projeto{
+    width: 100%;
+    height: 15mm;
+    margin: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    text-align: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(205,205,205,1) 100%);
+    padding-top: 15px;
+    font-size: 45px;
+    color: rgb(65, 42, 165);
+}
+
+#projetos-filho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 6px 0 10px rgb(31, 0, 59);
+    width: 600px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(205,205,205,1) 100%);
+}
+
+#desc-projeto{
+    width: 580px;
+    height: 15mm;
+    margin: 0;
+    text-align: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(205,205,205,1) 100%);
+    padding-top: 15px;
+    overflow-wrap: break-word;
+    color: rgb(65, 42, 165);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin: 20px;
+}
+
+.btn-op{
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: filter 1500ms ease-in-out;
+}
+
+.btn-op:hover{
+   filter: drop-shadow(0 0 20px rgb(255, 255, 255));
+}
+@keyframes mudaCor {
+    0%   { color: rgb(255, 255, 255); } 
+    50%  { color: rgb(28, 251, 255); } 
+    100% { color: rgb(252, 252, 252); } 
+}
+
+@keyframes mudaBox {
+    0%   { box-shadow: 0 0 20px rgb(0, 248, 236);}
+    50%  { box-shadow: 0 0 20px rgb(212, 212, 212); } 
+    100% { box-shadow: 0 0 20px rgb(1, 238, 255); }
+}
+
+
+#sub-titulo {
+    color: rgb(26, 195, 195); 
+    font-size: 140px;
+    animation-name: mudaCor;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out; /* Faz a transição mais suave */
+    animation-iteration-count: infinite;
+    margin-left: 20px;
+    transition: 1300ms font-size;
+}
+
+#sub-titulo:hover{
+    font-size: 180px;
+}
+
+#escolhas-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(224,224,224,1) 100%);
+    width: 20%;
+    height: 100%;
+}
+
+#escolhas-div > button{
+    border: none;
+    padding: 20px;
+    font-family: "Jersey 10",sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgb(8,36,245);
+    background: linear-gradient(90deg, rgba(8,36,245,1) 0%, rgba(122,10,207,1) 100%);
+    color: rgb(255, 255, 255);
+    transition: padding-left 1100ms, padding-right 1100ms, box-shadow 1100ms ease-in-out;
+}
+
+#escolhas-div > button:hover{
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+#expe-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    background: rgb(129,21,217);
+    background: linear-gradient(0deg, rgba(129,21,217,1) 0%, rgba(94,0,255,1) 100%);
+    text-align: center;
+  }
+
+  #expe-div > h2 {
+    font-size: 95px;
+    text-shadow: 4px 4px 6px rgb(24, 50, 197);
+    color: rgb(255, 255, 255);
+  }
+
+  #expe-div > div {
+    width: 80%
+  }
+
+  #expe-div > div > p {
+    font-size: 20px;
+    line-height: 25px;
+    padding: 10px;
+    color: white;
+  }
+
+  #canvas-expe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    align-items: center;
+}
